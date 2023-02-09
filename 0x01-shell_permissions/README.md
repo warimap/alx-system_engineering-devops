@@ -1,0 +1,1 @@
+script for shell 0x02
