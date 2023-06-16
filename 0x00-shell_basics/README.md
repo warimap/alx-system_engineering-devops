@@ -32,5 +32,5 @@ All of the following files are scripts, except `holberton.mgc`:
 | `18-commas` | Lists all the files and directories of the current directory, separated by commas (`,`) |
 | `school.mgc` | Magic file that can be used with the command `file` to detect `school` data files. `school` data files always contain the string `school` at offset 0 |
 
-![](.![Screenshot_bash](https://github.com/warimap/alx-system_engineering-devops/assets/123955570/10f3a425-c52b-4bd2-a83c-49a238fd59f2)
-)
+![Screenshot_bash](https://github.com/warimap/alx-system_engineering-devops/assets/123955570/10f3a425-c52b-4bd2-a83c-49a238fd59f2)
+
