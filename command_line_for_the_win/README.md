@@ -11,3 +11,6 @@
 ## Task 2
 
 ![Task2](./2-next_9_tasks.png.png)
+
+# Completed the challenge 
+![](./0-first_9_tasks.png.png)
