@@ -16,3 +16,6 @@ All of the following folders are projects done during the studies:
 | [`0x01-shell_permissions`](https://github.com/warimap/alx-system_engineering-devops/tree/master/0x01-shell_permissions) | It aims to learn about man pages, permissions (owner, group and other) of files and directories in **Shell** |
 | [`0x02-shell_redirections`](https://github.com/warimap/alx-system_engineering-devops/tree/master/0x02-shell_redirections) | It aims to learn about how to handle standard input and output and how to combine commands and filters with redirections in **Shell** |
 | [`0x03-shell_variable_expansions`](https://github.com/warimap/alx-system_engineering-devops/tree/master/0x03-shell_variables_expansions) | It aims to learn about alias builtin, help builtin, local, global and reserved variables (PATH, HOME and PS1), special parameters `$?` and single an double quotes in **Shell** |
+
+## Project performance
+![Screenshot_month 0](https://github.com/warimap/alx-system_engineering-devops/assets/123955570/ba05041e-a969-4acd-ae63-f482361ad1f6)
