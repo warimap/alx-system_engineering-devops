@@ -2,12 +2,12 @@
 
 ## Task 0
 
-![Task0](./0-first_9_tasks.png)
+![Task0](./0-first_9_tasks.png.png)
 
 ## Task 1
 
-![Task1](./1-next_9_tasks.png)
+![Task1](./1-next_9_tasks.png.png)
 
 ## Task 2
 
-![Task2](./2-next_9_tasks.png)
+![Task2](./2-next_9_tasks.png.png)
