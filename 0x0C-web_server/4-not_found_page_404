@@ -1,26 +1,19 @@
 #!/usr/bin/env bash
-# sets up a new 404 error page
-sudo apt-get update
-sudo apt-get install -y nginx 
-echo "Hello World!" > index.html
-sudo mv index.html /var/www/html
+## Perform nginx server install and config
 
+sudo apt-get -y update
+sudo apt-get -y install nginx
+echo "Hello World!" | sudo tee /var/www/html/index.html
 
-echo "Ceci n'est pas une page" > 404.html
-sudo mv 404.html /var/www/html
-echo "server {
-   listen 80 default_server;
-   listen [::]:80 default_server;
-   
-   root /var/www/html;
-   index index.html;
-   location /redirect_me {
-      return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
-   }
-   error_page 404 /404.html;
-   location = /404.html{
-      internal;
-   }
-}" > default
-sudo mv -f default /etc/nginx/sites-available/default
-sudo service nginx restart
+# configure nginx server
+default_sites="/etc/nginx/sites-available/default"
+location=$(grep -Fn location $default_sites | head -1 | cut -d":" -f1)
+location_data="\\\tlocation /redirect_me {\n\t\treturn 301 https://youtu.be/mlUOUncSaTk;\n\t}\n\n"
+error_page="\\\terror_page 404 /404.html;\n"
+
+echo "Ceci n'est pas une page" | sudo tee "/var/www/html/404.html"
+
+## Update default site to redirect and start nginx server
+sudo sed -i "${location}i ${location_data}" ${default_sites}
+sudo sed -i "${location}i ${error_page}" ${default_sites}
+sudo service nginx start
