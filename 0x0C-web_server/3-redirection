@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
-# Perform nginx server install and config
+#  A Script that configures a new Ubuntu machine to Perform a 301-redirection
 
-sudo apt-get -y update
-sudo apt-get -y install nginx
+# Upadating Packages before Installations
+sudo apt-get update
+sudo apt-get install -y nginx
+
+sudo ufw allow 'Nginx HTTP'
+
+# Creating an index.html page
 echo "Hello World!" | sudo tee /var/www/html/index.html
 
-# configure nginx server
-default_sites="/etc/nginx/sites-available/default"
-location=$(grep -Fn location $default_sites | head -1 | cut -d":" -f1)
-location_data="\\\tlocation /redirect_me {\n\t\treturn 301 https://youtu.be/mlUOUncSaTk;\n\t}\n\n"
+# Performing a 301 Redirectionstring_for_replacement="server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com\/warimap permanent;"
+sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
 
-## Update default site to redirect and start nginx server
-sudo sed -i "${location}i ${location_data}" ${default_sites}
-sudo service nginx start
+# Restarting Nginx service
