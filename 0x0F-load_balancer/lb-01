@@ -1,0 +1,7 @@
+erver-3  login 
+
+eval $("ssh-agent")
+
+ssh-add ~/.ssh/school
+
+ssh ubuntu@34.207.83.4
