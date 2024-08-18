@@ -47,4 +47,5 @@ frontend warimap-frontend-https
 
 backend warimap-backend
         balance roundrobin
-        
+        server 255243-web-01 34.204.60.71:80 check
+        server 255243-web-02 34.207.155.190:80 check
