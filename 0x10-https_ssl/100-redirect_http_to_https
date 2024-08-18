@@ -32,20 +32,19 @@ defaults
         errorfile 502 /etc/haproxy/errors/502.http
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
-
-frontend clickviral-frontend
+frontend warimap-frontend
         bind *:80
         mode http
         http-request redirect scheme https code 301 unless { ssl_fc }
         http-request set-header X_Forwarded-Proto http
-        default_backend clickviral-backend
+        default_backend warimap-backend
 
-frontend clickviral-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/clickviral.tech.pem
+frontend warimap-frontend-https
+        bind *:443 ssl crt /etc/haproxy/certs/warimap.tech.pem
         http-request set-header X-Forwarded-Proto https
-        default_backend clickviral-backend
+        default_backend warimap-backend
 
-backend clickviral-backend
+backend warimap-backend
         balance roundrobin
-        server 255243-web-01 54.146.86.30:80 check
-        server 255243-web-02 52.91.116.26:80 check
+        server 255243-web-01 34.204.60.71:80 check
+        server 255243-web-02 34.207.155.190:80 check
