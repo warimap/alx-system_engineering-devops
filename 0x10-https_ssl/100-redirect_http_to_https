@@ -40,7 +40,7 @@ frontend warimap-frontend
         default_backend warimap-backend
 
 frontend warimap-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/warimap.tech.pem
+        bind *:443 ssl crt /etc/haproxy/certs/www.warimap.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend warimap-backend
 
