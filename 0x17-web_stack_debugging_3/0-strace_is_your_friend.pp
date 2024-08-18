@@ -1,15 +1,6 @@
-# This Puppet manifest ensures the /var/www/html directory exists with the correct permissions
-file { '/var/www/html':
-  ensure  => directory,
-  owner   => 'www-data',
-  group   => 'www-data',
-  mode    => '0755',
-}
+# Fixes bad `phpp` extensions to `php` in the WordPress file `wp-settings.php`.
 
-# Restart Apache to apply the changes
-service { 'apache2':
-  ensure => running,
-  enable => true,
-  require => File['/var/www/html'],
+exec { 'fix-wordpress':
+  command => 'sed -i s/phpp/php/g /var/www/html/wp-settings.php',
+  path    => '/usr/local/bin/:/bin/'
 }
-
