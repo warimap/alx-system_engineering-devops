@@ -4,7 +4,7 @@ Upon the release of ALX's System Engineering & DevOps project 0x19, approximatel
 
 ## Debugging Process
 
-Bug debugger kudzie-zoh (Zoh... as in my actual short surname version... made that up on the spot, pretty
+Bug debugger warimap( as in my actual short surname version... made that up on the spot, pretty
 good, huh?) encountered the issue upon opening the project and being, well, instructed to
 address it, roughly 19:20 PST. He promptly proceeded to undergo solving the problem.
 
@@ -53,7 +53,7 @@ and could have been addressed earlier had the app been tested.
 [UptimeRobot](./https://uptimerobot.com/) to alert instantly upon outage of the website.
 
 Note that in response to this error, I wrote a Puppet manifest
-[0-strace_is_your_friend.pp](https://github.com/kudzieohx-system_engineering-devops/blob/master/0x17-web_stack_debugging_3/0-strace_is_your_friend.pp)
+[0-strace_is_your_friend.pp](https://github.com/warimap-system_engineering-devops/blob/master/0x17-web_stack_debugging_3/0-strace_is_your_friend.pp)
 to automate fixing of any such identitical errors should they occur in the future. The manifest
 replaces any `phpp` extensions in the file `/var/www/html/wp-settings.php` with `php`.
 
@@ -64,8 +64,7 @@ Upon the release of ALX's System Engineering & DevOps project 0x19, approximatel
 
 ## Debugging Process
 
-Bug debugger kudzie-zoh (Zoh... as in my actual short surname version... made that up on the spot, pretty
-good, huh?) encountered the issue upon opening the project and being, well, instructed to
+Bug debugger warimap encountered the issue upon opening the project and being, well, instructed to
 address it, roughly 19:20 PST. He promptly proceeded to undergo solving the problem.
 
 1. Checked running processes using `ps aux`. Two `apache2` processes - `root` and `www-data` -
@@ -113,7 +112,7 @@ and could have been addressed earlier had the app been tested.
 [UptimeRobot](./https://uptimerobot.com/) to alert instantly upon outage of the website.
 
 Note that in response to this error, I wrote a Puppet manifest
-[0-strace_is_your_friend.pp](https://github.com/kudzie-zoh/alx-system_engineering-devops/blob/master/0x17-web_stack_debugging_3/0-strace_is_your_friend.pp)
+[0-strace_is_your_friend.pp](https://github.com/warimap/alx-system_engineering-devops/blob/master/0x17-web_stack_debugging_3/0-strace_is_your_friend.pp)
 to automate fixing of any such identitical errors should they occur in the future. The manifest
 replaces any `phpp` extensions in the file `/var/www/html/wp-settings.php` with `php`.
 
