@@ -1,4 +1,4 @@
-erver-3  login 
+server-3  login 
 
 eval $("ssh-agent")
 
